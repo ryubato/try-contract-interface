@@ -1,0 +1,3 @@
+rootProject.name = 'try-contract-interface'
+
+include 'contract-comment', 'comment', 'article'
