@@ -4,6 +4,6 @@ import com.example.contract.comment.CommentResponseDto;
 
 import java.util.List;
 
-public interface ArticleRestContractService {
+public interface CommentRestContractService {
     List<CommentResponseDto> findComments();
 }

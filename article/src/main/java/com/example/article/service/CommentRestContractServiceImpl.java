@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ArticleRestContractServiceImpl implements ArticleRestContractService {
+public class CommentRestContractServiceImpl implements CommentRestContractService {
 
     private final CommentRestContract commentRestContract;
 
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-    public ArticleRestContractServiceImpl(CommentRestContract commentRestContract) {
+    public CommentRestContractServiceImpl(CommentRestContract commentRestContract) {
         this.commentRestContract = commentRestContract;
     }
 

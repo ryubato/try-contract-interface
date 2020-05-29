@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name = "comment", url = "localhost:8881")
+@FeignClient(name = "${service.comment.name}", url = "${service.comment.url}")
 public interface CommentRestContract {
 
     @GetMapping("/comments")
     List<CommentResponseDto> findComments();
+    
 }

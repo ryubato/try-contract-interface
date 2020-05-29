@@ -45,6 +45,15 @@ project(':contract-comment') {
     }
 }
 
+project(':contract-comment-stub') {
+    apply plugin: 'org.springframework.boot'
+
+    dependencies {
+        compile project(':contract-comment')
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+    }
+}
+
 project(':comment') {
     apply plugin: 'org.springframework.boot'
 

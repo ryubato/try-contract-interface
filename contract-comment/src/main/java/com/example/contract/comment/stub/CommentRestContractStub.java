@@ -1,4 +1,4 @@
-package com.example.comment.web;
+package com.example.contract.comment.stub;
 
 import com.example.contract.comment.CommentResponseDto;
 import com.example.contract.comment.CommentRestContract;
@@ -10,11 +10,18 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
-public class CommentRestController implements CommentRestContract {
+public class CommentRestContractStub implements CommentRestContract {
+
+    private boolean calledFindComments = false;
+
+    public boolean isCalledFindComments() {
+        return calledFindComments;
+    }
 
     @Override
     @GetMapping("/comments")
     public List<CommentResponseDto> findComments() {
+        calledFindComments = true;
 
         CommentResponseDto commentResponseDto = CommentResponseDto.of(1L, "test", "admin", LocalDateTime.now(), 1L);
 

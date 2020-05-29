@@ -1,3 +1,4 @@
 rootProject.name = 'try-contract-interface'
 
-include 'contract-comment', 'comment', 'article'
+include 'contract-comment', 'contract-comment-stub'
+include 'comment', 'article'

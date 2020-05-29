@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: article-service
+
+server:
+  port: 9091
+
+service:
+  comment:
+    name: comment-service
+    url: "http://localhost:9090"
