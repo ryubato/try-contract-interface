@@ -16,7 +16,7 @@ public class CommentRestController implements CommentRestContract {
     @GetMapping("/comments")
     public List<CommentResponseDto> findComments() {
 
-        CommentResponseDto commentResponseDto = CommentResponseDto.of(1L, "test", "admin", LocalDateTime.now(), 1L);
+        CommentResponseDto commentResponseDto = CommentResponseDto.of(1L, "test", "admin", LocalDateTime.now());
 
         return Collections.singletonList(commentResponseDto);
     }

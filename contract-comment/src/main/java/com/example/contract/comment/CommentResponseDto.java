@@ -13,18 +13,16 @@ public class CommentResponseDto {
     private String content;
     private String writerName;
     private LocalDateTime createdDate;
-    private Long articleId;
 
     @Builder
-    public CommentResponseDto(Long id, String content, String writerName, LocalDateTime createdDate, Long articleId) {
+    public CommentResponseDto(Long id, String content, String writerName, LocalDateTime createdDate) {
         this.id = id;
         this.content = content;
         this.writerName = writerName;
         this.createdDate = createdDate;
-        this.articleId = articleId;
     }
 
-    public static CommentResponseDto of(Long id, String content, String writerName, LocalDateTime createdDate, Long articleId) {
-        return new CommentResponseDto(id, content, writerName, createdDate, articleId);
+    public static CommentResponseDto of(Long id, String content, String writerName, LocalDateTime createdDate) {
+        return new CommentResponseDto(id, content, writerName, createdDate);
     }
 }

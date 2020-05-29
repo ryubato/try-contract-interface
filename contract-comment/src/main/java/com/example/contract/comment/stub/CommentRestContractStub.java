@@ -23,7 +23,7 @@ public class CommentRestContractStub implements CommentRestContract {
     public List<CommentResponseDto> findComments() {
         calledFindComments = true;
 
-        CommentResponseDto commentResponseDto = CommentResponseDto.of(1L, "test", "admin", LocalDateTime.now(), 1L);
+        CommentResponseDto commentResponseDto = CommentResponseDto.of(1L, "test", "admin", LocalDateTime.now());
 
         return Collections.singletonList(commentResponseDto);
     }
